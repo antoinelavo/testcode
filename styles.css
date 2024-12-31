@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px 0px;
+    padding: 0p;
+    background-color: #ffffff;
+}
+
+:root{
+    --primarycolor: #000000;
+    --secondarycolor: #ffffff;
+    --accentcolor: #3e9be9;
+    --gray: #a6a6a6;
+    --lightgray: #f0f0f0;
+}
+
+li, a, button {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-size: 16px; 
+    color: var(--gray);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%; 
+}
+
+.logo{
+    cursor: pointer;
+    height: auto;
+    width: clamp(200px, 15%, 20%);
+    margin-left: 10%;
+}
+
+hr{
+    height: 1px;
+    border: 1px solid var(--lightgray);
+    width: clamp(1000px, 80%, 80%);
+    margin: 0px auto;
+}
+
+.nav_links, .sidebar{
+    list-style: none;
+    border: #000000 5px;
+}
+
+.nav_links li{
+    display: inline-block; 
+    padding: 0px 20px; 
+}
+
+.nav_links li a { 
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links:first-child{
+    margin-right: 100px;
+}
+
+.nav_links li a:hover, .sidebar li a:hover, .sidebar li:hover { 
+    color: var(--accentcolor);
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px; 
+    z-index: 999;
+    background-color: var(--secondarycolor);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px;
+
+}
+
+.sidebar li{
+    width: 100%;
+    height: 10%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.sidebar li:first-child{
+    margin-top: 50px;
+}
+
+button{
+    padding: 9px 25px; 
+    background-color:  rgba(0,136,169);
+    border: none; 
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+}
+
+@media(max-width: 1200px){
+    .hideOnMobile{
+        display:none !important;
+    }
+}
+
+@media(min-width: 1200px){
+    .hideOnPC{
+        display: none !important; 
+    }
+}
+

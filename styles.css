@@ -13,15 +13,27 @@
     --accentcolor: #3e9be9;
     --gray: #a6a6a6;
     --lightgray: #f0f0f0;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
-li, a, button {
-    font-family: "Noto Sans KR", sans-serif;
-    font-weight: 500;
+
+h1{
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--primarycolor);
+    text-align: center;
+}
+
+p{
+    font-weight: normal;
     font-size: 16px; 
     color: var(--gray);
-    text-decoration: none;
 }
+
+.blueEmphasis{
+    color: var(--accentcolor);
+}
+
 
 header{
     display: flex;
@@ -46,7 +58,6 @@ hr{
 
 .nav_links, .sidebar{
     list-style: none;
-    border: #000000 5px;
 }
 
 .nav_links li{
@@ -56,6 +67,14 @@ hr{
 
 .nav_links li a { 
     transition: all 0.3s ease 0s;
+}
+
+.nav_links li, .nav_links li a{
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: thin;
+    font-size: 14px; 
+    color: var(--gray);
+    text-decoration: none;
 }
 
 .nav_links:first-child{
@@ -95,18 +114,18 @@ hr{
     margin-top: 50px;
 }
 
-button{
-    padding: 9px 25px; 
-    background-color:  rgba(0,136,169);
-    border: none; 
-    border-radius: 50px;
+.button{
+    background: black;
+    border-radius: 10px;
+    background-color: var(--accentcolor);
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--secondarycolor);
+    padding: 10px;
+    
 }
 
-button:hover{
-    background-color: rgba(0,136,169,0.8);
-}
 
 @media(max-width: 1200px){
     .hideOnMobile{
@@ -120,3 +139,67 @@ button:hover{
     }
 }
 
+.titlePageText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 1280px;
+    margin: 0vw 10vw;
+}
+
+.titlePageText div{
+    width: 100%;
+    margin: auto;
+}
+
+.top{
+    height: 200px;
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 2em;
+    color: var(--primarycolor);
+}
+.middle{
+    font-size: 18px;
+    font-weight: medium;
+    color: var(--gray);
+}
+.bottom{
+    height: 70px;
+    display: flex; 
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer {
+    position: relative; 
+    margin-top: 30%;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0; 
+}
+
+.footerText{
+    color: gray;
+    font-size: 14px;
+    margin: 2% clamp(20% ,20% ,10px);
+}
+
+
+.article{
+    border: 2px solid black;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5% 5%;
+    align-items: center;
+}
